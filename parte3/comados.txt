@@ -1,0 +1,24 @@
+1. Levantar todo el stacK
+
+docker-compose -f parte3/docker-compose.yml up -d
+
+2. Verificar que todos los servicios están corriendo
+
+docker-compose -f parte3/docker-compose.yml ps
+
+3. Probar la API con curl
+
+curl http://localhost:3000
+curl http://localhost:3000/salud
+
+4. Ver logs de todos los servicios
+
+docker-compose -f parte3/docker-compose.yml logs
+
+5. Ver logs de un servicio específico (ej: api)
+
+docker-compose -f parte3/docker-compose.yml logs api
+
+6. Detener y eliminar contenedores, redes y volúmenes
+
+docker-compose -f parte3/docker-compose.yml down -v
