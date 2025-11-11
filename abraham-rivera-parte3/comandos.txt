@@ -1,0 +1,31 @@
+LEVANTAR EL STACK
+docker compose up -d
+
+VERIFICAR SERVICIOS CORRIENDO
+docker compose ps
+
+PROBAR API
+curl http://localhost:3000/
+
+PROBAR ENDPOINT DE SALUD
+curl http://localhost:3000/salud
+
+VER LOGS DE LA API
+docker compose logs api
+
+DETENER Y LIMPIAR CONTENEDORES Y VOLUMENES
+docker compose down -v
+
+ERROR DE CONFLICTO CONTAINER NAME
+docker stop db-examen
+docker rm db-examen
+docker container prune -f
+
+VOLVER A LEVANTAR EL STACK
+docker compose up -d
+docker compose ps
+
+RECONSTRUCCIÓN DEL STACK LUEGO DE CAMBIOS EN CÓDIGOS
+docker compose down -v
+docker compose up -d --build
+docker compose ps
